@@ -3,7 +3,7 @@
 __author__ = "Gareth Coles"
 
 """
-Write a program that takes a filename as a command-line argument, counts how many times each word appears in the file, 
+Write a program that takes a filename as a command-line argument, counts how many times each word appears in the file,
 and prints the word that appears the most (and the number of times it appears).
 """
 
