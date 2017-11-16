@@ -1,4 +1,6 @@
 # coding=utf-8
+import os
+
 from test.utils import run_flake8
 
 __author__ = "Gareth Coles"
@@ -12,8 +14,8 @@ class TestCase:
     flake8_messages = []  # Messages from Flake8, formatted for the user
 
     # Bonus points breakdown and whether each bonus point was achieved
-    # { "friendly info line": (True/False, number of points) }
-    # EG: { "Bonus: Did XYZ": (True, 1) }
+    # { "friendly info line": True/False }
+    # EG: { "Don't break on an invalid file path": True }
     breakdown = {}
 
     title = "Easy: Line Counter"  # Friendly name for this challenge
@@ -21,7 +23,6 @@ class TestCase:
 
     def __init__(self):
         self.points = 0
-        self.max_points = 0
         self.passed = False
         self.flake8 = False
         self.flake8_messages = []
@@ -45,12 +46,13 @@ class TestCase:
             return
         elif not result:  # Empty, so no errors
             self.flake8 = True
+            self.points += 1
             return
 
         for line in result:
             parts = line.split(" ", 1)
             file_info = parts[0].split(":")
-            filename = file_info[0][len(self.test_path) + 1:]
+            filename = file_info[0][len(self.test_path) + 12:]  # Challenges dir plus trailing slash
             line_number = file_info[1]
 
             self.flake8_messages.append("{} (L{}) - {}".format(filename, line_number, parts[1]))

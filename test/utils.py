@@ -2,6 +2,7 @@
 import importlib
 import os
 import subprocess
+from types import ModuleType
 
 from typing import List, Any, Dict
 
@@ -9,6 +10,7 @@ __author__ = "Gareth Coles"
 
 
 def run_flake8(filename: str):
+    filename = "challenges" + os.sep + filename
     try:
         result = subprocess.run(
             ["flake8", filename, "--config", "./tox.ini"],
@@ -25,19 +27,23 @@ def run_flake8(filename: str):
     return [line for line in lines if line.strip()]
 
 
-def run_console_challenge(filename: str, *args: List[str]):
+def run_console_challenge(location: str, *args: str):
+    # Unless you're checking types, please only use `returncode` and `stdout` on the returned object
     try:
-        return subprocess.run(
-            ["python", filename] + args,
+        result = subprocess.run(
+            ["python", "challenges" + os.sep + location + os.sep + "__init__.py"] + list(args),
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             encoding="utf-8"
         )
     except subprocess.CalledProcessError as e:
-        return e
+        result = e
+
+    result.stdout = result.stdout.strip().split("\n")
+    return result
 
 
-def run_importable_challenge(module_name: str, function_name: str, *args: List[Any], **kwargs: Dict[Any, Any]):
+def run_importable_challenge(module_name: str, function_name: str, *args: Any, **kwargs: Any):
     mod = importlib.import_module(module_name)
     importlib.reload(mod)  # To be on the safe side
 
@@ -45,7 +51,7 @@ def run_importable_challenge(module_name: str, function_name: str, *args: List[A
     return func(*args, **kwargs)
 
 
-def get_modules(directory):
+def get_modules(directory) -> List[ModuleType]:
     directory = os.path.normpath(directory)
 
     files = filter(
