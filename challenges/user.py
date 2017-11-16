@@ -10,5 +10,5 @@ on how to find it.
 If you don't have a Discord account, please set this to None instead.
 """
 
-# __learner__ = "123456789012345678"
-__learner__ = None
+__learner__ = "123456789012345678"
+# __learner__ = None
