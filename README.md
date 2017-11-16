@@ -9,9 +9,10 @@ of the Python community Discord server, but anyone may participate!
 Getting Started
 ---------------
 
-The first thing you should do is [fork this repository](). This will create a copy of the repository under your own
-GitHub account. Once you've done this, go ahead and look in the `challenges` folder - each challenge contains a
-single file that both has an explanation of the challenge at hand, and a function for you to complete.
+The first thing you should do is [fork this repository](https://github.com/gdude2002/python-challenges/fork). This will 
+create a copy of the repository under your own GitHub account. Once you've done this, go ahead and look in the 
+`challenges` folder - each challenge contains a single file that both has an explanation of the challenge at hand, 
+and a function for you to complete.
 
 You may use any editor you like (including the GitHub web interface) to complete your challenges. When you're ready to
 submit your answers for testing, you should [create a pull request](https://github.com/gdude2002/python-challenges/compare).
