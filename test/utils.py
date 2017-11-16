@@ -60,6 +60,3 @@ def get_modules(directory):
         modules.append(importlib.import_module(directory.replace(os.sep, ".") + "." + fn))
 
     return modules
-
-
-print(get_modules("test/tests"))
