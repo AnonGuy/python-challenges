@@ -4,6 +4,14 @@ Line Counter
 **Write a program that takes a filename as a command-line argument and prints the number 
 of lines in that file.**
 
+Example output
+--------------
+
+```batch
+> python __init__.py file_with_four_lines.txt
+4
+```
+
 Research Topics
 ---------------
 

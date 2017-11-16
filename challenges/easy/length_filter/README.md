@@ -4,7 +4,8 @@ Length Filter
 **Write a function that takes a list of strings and a minimum length number, and returns 
 only the strings that are longer than the provided number.**
 
-For exmaple:
+Example output
+--------------
 
 ```python
 >>> longer_than(3, ["hit", "me", "baby", "one", "more", "time"])
