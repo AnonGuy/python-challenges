@@ -11,8 +11,10 @@ Getting Started
 
 The first thing you should do is [fork this repository](https://github.com/gdude2002/python-challenges/fork). This will 
 create a copy of the repository under your own GitHub account. Once you've done this, go ahead and look in the 
-`challenges` folder - each challenge contains a single file that both has an explanation of the challenge at hand, 
-and a function for you to complete.
+`challenges` folder - each challenge contains two files.
+
+* `README.md` - Offers an overview of the challenge and what is expected of you.
+* `__init__.py` - Should contain your solution to the challenge. Note that you're free to add more files and import them
 
 You may use any editor you like (including the GitHub web interface) to complete your challenges. When you're ready to
 submit your answers for testing, you should [create a pull request](https://github.com/gdude2002/python-challenges/compare).
@@ -20,6 +22,9 @@ Once your pull request has been submitted, CircleCI will test your answers and g
 
 Feel free to continue working on your challenges as long as you want - practise makes perfect! You won't have to create
 a new PR every time, so go nuts!
+
+If you'd like to take a stab at a challenge introduced after you made your pull request, feel free to merge the changes
+in yourself. Alternatively, you can always delete your fork and create a new fork.
 
 Requirements
 ------------
@@ -36,6 +41,7 @@ We will notify you on Discord when your grade is available. If you don't know ho
 * All challenges will be tested for [PEP8 compliance](https://www.python.org/dev/peps/pep-0008/).
     * We use the excellent [Flake8 tool](http://flake8.pycqa.org/en/latest/) for this.
     * Failing this test will not fail your challenge entirely, but you will lose points.
+    * Our line limit is set to 120 characters (instead of 80) for the sake of sanity.
     
 Libraries
 ---------
