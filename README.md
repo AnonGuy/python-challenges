@@ -42,6 +42,8 @@ We will notify you on Discord when your grade is available. If you don't know ho
     * We use the excellent [Flake8 tool](http://flake8.pycqa.org/en/latest/) for this.
     * Failing this test will not fail your challenge entirely, but you will lose points.
     * Our line limit is set to 120 characters (instead of 80) for the sake of sanity.
+* Obviously, don't break the build process. You're here to attempt the challenges - unless you're contributing challenges
+or tests yourself, please only try to solve the challenges. Anything else will get you blocked from the repo.
     
 Libraries
 ---------
