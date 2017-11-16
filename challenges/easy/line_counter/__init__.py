@@ -8,4 +8,4 @@ Write a program that takes a filename as a command-line argument and prints the 
 
 
 if __name__ == "__main__":
-    pass
+    print("Your answer should be printed.")
