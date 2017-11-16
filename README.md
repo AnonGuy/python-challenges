@@ -41,4 +41,5 @@ Contributing
 ============
 
 Are you an experienced Python developer? We're always looking for new challenges and fixes to the existing test suite! Feel
-free to submit a pull request that follows our naming conventions, 
+free to submit a pull request that follows our naming conventions, or join us on Discord to discuss any changes you're
+not sure about.
