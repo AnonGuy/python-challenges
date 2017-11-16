@@ -36,6 +36,13 @@ We will notify you on Discord when your grade is available. If you don't know ho
 * All challenges will be tested for [PEP8 compliance](https://www.python.org/dev/peps/pep-0008/).
     * We use the excellent [Flake8 tool](http://flake8.pycqa.org/en/latest/) for this.
     * Failing this test will not fail your challenge entirely, but you will lose points.
+    
+Libraries
+---------
+
+The following libraries are available for you to use in your challenges.
+
+* [Requests](http://docs.python-requests.org/en/master/)
 
 Contributing
 ============
